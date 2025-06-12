@@ -1,48 +1,54 @@
 .skills {
   padding: 4rem 2rem;
-  background: #ffffff;
-  color: #1a1a1a;
+  background: linear-gradient(135deg, #e0f4ff, #ffffff);
+  color: #0b1e42;
   font-family: 'Poppins', sans-serif;
 }
 
 .skills h2 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   text-align: center;
-  color: #007bff;
+  color: #0056cc;
   margin-bottom: 3rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 6px rgba(0, 86, 204, 0.3);
   position: relative;
 }
 
 .skills-category {
   margin-bottom: 3rem;
-  padding: 2rem;
-  border-radius: 16px;
-  background: #f5f9ff;
-  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
-  transition: transform 0.3s ease;
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  background: #d6e4ff;
+  box-shadow: 0 8px 20px rgba(0, 86, 204, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skills-category:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
+  box-shadow: 0 14px 28px rgba(0, 86, 204, 0.3);
 }
 
 .skills-category h3 {
-  font-size: 1.8rem;
-  color: #007bff;
-  margin-bottom: 0.8rem;
+  font-size: 2rem;
+  color: #003d99;
+  margin-bottom: 1rem;
+  font-weight: 700;
 }
 
 .category-description {
-  font-size: 1rem;
-  color: #444;
-  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+  color: #223355;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  max-width: 700px;
 }
 
-/* Skills list */
 .skills-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.2rem;
   padding: 0;
   list-style: none;
 }
@@ -50,49 +56,68 @@
 .skill-item {
   display: flex;
   align-items: center;
-  background: #e6f0ff;
-  color: #007bff;
-  padding: 0.7rem 1rem;
-  border-radius: 12px;
+  background: #ffffff;
+  color: #004aad;
+  padding: 0.8rem 1.2rem;
+  border-radius: 14px;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
   position: relative;
-  font-weight: 500;
-  box-shadow: 0 2px 6px rgba(0, 123, 255, 0.1);
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 74, 173, 0.15);
 }
 
 .skill-item:hover {
-  background: #d0e7ff;
-  transform: scale(1.03);
+  background: #c7d9ff;
+  transform: scale(1.06);
+  box-shadow: 0 8px 16px rgba(0, 74, 173, 0.3);
 }
 
 .skill-icon {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   object-fit: contain;
-  margin-right: 8px;
+  margin-right: 10px;
+  filter: drop-shadow(0 0 2px rgba(0, 74, 173, 0.5));
 }
 
-/* Tooltip */
+/* Tooltip amélioré, positionné juste au-dessus du skill, plus visible */
 .tooltip {
-  position: fixed;
-  bottom: 20px;
+  position: absolute;
+  bottom: 110%; /* Remonte juste au-dessus */
   left: 50%;
   transform: translateX(-50%);
-  background: #007bff;
-  color: #ffffff;
-  padding: 0.8rem 1.2rem;
-  border-radius: 10px;
-  font-size: 0.9rem;
+  background: #0056cc;
+  color: #fff;
+  padding: 0.8rem 1.4rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
   white-space: pre-line;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 18px rgba(0, 86, 204, 0.5);
   z-index: 1000;
-  animation: fadeIn 0.3s ease-out;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateX(-50%) translateY(10px); }
-  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+/* Flèche tooltip */
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: #0056cc transparent transparent transparent;
+}
+
+/* Tooltip visible quand skill-item est hover ou actif */
+.skill-item:hover .tooltip,
+.skill-item.active .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(-6px);
 }
 
 /* Responsive */
@@ -106,10 +131,14 @@
   }
 
   .skills h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .skills-category h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+  }
+
+  .category-description {
+    font-size: 1rem;
   }
 }
