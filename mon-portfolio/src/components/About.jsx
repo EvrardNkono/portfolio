@@ -28,8 +28,19 @@ const About = () => {
             Salut, moi c’est <strong>Evrard Nkono</strong>, développeur web full-stack freelance.
             Je transforme des idées en expériences digitales modernes, performantes et belles.
             Passionné par le code, la culture, et les projets à impact, je ne conçois pas mon travail sans <strong>valeur ajoutée</strong>.
+          <div className="social-float">
+          <a href="https://linkedin.com/in/tonprofil" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img src="images/skills/linkedin.jpg" alt="LinkedIn" />
+          </a>
+          <a href="https://github.com/tonprofil" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <img src="images/skills/github.png" alt="GitHub" />
+          </a>
+          
+        </div>
           </p>
+          
         );
+        
       case 'parcours':
         return (
           <p>
@@ -100,10 +111,10 @@ const About = () => {
           <div className="profile-pic">
             <img src="/images/evrard.jpg" alt="Photo d'Evrard Nkono" />
           </div>
-          <div className="skills-visuals">
-            <img src="/images/code-icon.svg" alt="Développement" />
-            <img src="/images/graphic-icon.svg" alt="Infographie" />
-            <img src="/images/project-icon.svg" alt="Projets" />
+          <div className="skills">
+            <img src="images/skills/html5.png" alt="Développement" />
+            <img src="images/skills/node.png" alt="Infographie" />
+            <img src="images/skills/react.png" alt="Projets" />
           </div>
         </div>
       </div>
