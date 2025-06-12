@@ -1,0 +1,115 @@
+.skills {
+  padding: 4rem 2rem;
+  background: #ffffff;
+  color: #1a1a1a;
+  font-family: 'Poppins', sans-serif;
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.skills-category {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  border-radius: 16px;
+  background: #f5f9ff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.skills-category:hover {
+  transform: translateY(-6px);
+}
+
+.skills-category h3 {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-bottom: 0.8rem;
+}
+
+.category-description {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1.2rem;
+}
+
+/* Skills list */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  background: #e6f0ff;
+  color: #007bff;
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  position: relative;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0, 123, 255, 0.1);
+}
+
+.skill-item:hover {
+  background: #d0e7ff;
+  transform: scale(1.03);
+}
+
+.skill-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  margin-right: 8px;
+}
+
+/* Tooltip */
+.tooltip {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #007bff;
+  color: #ffffff;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  white-space: pre-line;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-list {
+    flex-direction: column;
+  }
+
+  .skill-item {
+    justify-content: flex-start;
+  }
+
+  .skills h2 {
+    font-size: 2rem;
+  }
+
+  .skills-category h3 {
+    font-size: 1.5rem;
+  }
+}

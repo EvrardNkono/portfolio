@@ -1,0 +1,69 @@
+.projects {
+  background-color: #f8fbff;
+  padding: 60px 30px;
+  color: #0a2540;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  color: #0077ff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.projects .intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.project {
+  margin-bottom: 50px;
+  background-color: #ffffff;
+  border-left: 6px solid #0077ff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 119, 255, 0.1);
+}
+
+.project h3 {
+  color: #0056cc;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.project p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.project a {
+  color: #0077ff;
+  text-decoration: none;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+.project-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.project-images img {
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 119, 255, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.project-images img:hover {
+  transform: scale(1.05);
+}
