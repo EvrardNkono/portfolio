@@ -1,28 +1,18 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';  // <-- voilà l'import manquant
+import { FaBars, FaTimes } from 'react-icons/fa';
 import './Header.css';
-
 const Header = () => {
-  // State qui dit si le menu est ouvert (true) ou fermé (false)
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Change l’état d’ouverture du menu
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
-  // Ferme le menu (utile quand on clique sur un lien)
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <header className="header">
       <nav className="nav">
-        {/* Logo / Titre */}
         <h1 className="logo">Evrard Nkono</h1>
 
-        {/* Le menu, avec la classe 'active' si ouvert sur mobile */}
         <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
           <li><NavLink to="/" end onClick={closeMenu}>Accueil</NavLink></li>
           <li><NavLink to="/about" onClick={closeMenu}>À propos</NavLink></li>
@@ -31,17 +21,25 @@ const Header = () => {
           <li><NavLink to="/contact" onClick={closeMenu}>Contact</NavLink></li>
         </ul>
 
-        {/* Le bouton hamburger visible uniquement en mobile */}
         <button
-          className={`menu-toggle ${menuOpen ? 'open' : ''}`}
+          className="menu-toggle"
           onClick={toggleMenu}
           aria-label="Toggle navigation menu"
           aria-expanded={menuOpen}
           type="button"
+          style={{
+            background: 'transparent',
+            border: 'none',
+            cursor: 'pointer',
+            position: 'fixed',
+            top: 15,
+            right: 20,
+            zIndex: 2000,
+            fontSize: '1.8rem',
+            color: '#1e90ff',
+          }}
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
       </nav>
     </header>
