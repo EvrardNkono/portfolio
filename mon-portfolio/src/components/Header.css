@@ -60,13 +60,14 @@
   position: fixed;  /* Toujours visible */
   top: 15px;
   right: 20px;
-  z-index: 1100;    /* Au-dessus du menu */
+  z-index: 2000;    /* Au-dessus du menu */
   filter: drop-shadow(0 0 4px #1e90ff);
   transition: filter 0.3s ease;
 }
 
 .menu-toggle:hover {
   filter: drop-shadow(0 0 8px #1e90ff);
+  z-index: 2000;
 }
 
 .menu-toggle span {
@@ -75,6 +76,7 @@
   background-color: #1e90ff;
   border-radius: 3px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2000;
 }
 
 /* Animation quand menu ouvert */
@@ -82,10 +84,12 @@
   transform: translateY(13px) rotate(45deg);
   background-color: #ff4500;
   box-shadow: 0 0 8px #ff4500;
+  z-index: 2000;
 }
 
 .menu-toggle.open span:nth-child(2) {
   opacity: 0;
+  z-index: 2000;
 }
 
 .menu-toggle.open span:nth-child(3) {
