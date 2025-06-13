@@ -32,11 +32,12 @@ const Header = () => {
             border: 'none',
             cursor: 'pointer',
             position: 'fixed',
-            top: 15,
+            top: 45,
             right: 20,
             zIndex: 2000,
             fontSize: '1.8rem',
             color: '#1e90ff',
+
           }}
         >
           {menuOpen ? <FaTimes /> : <FaBars />}

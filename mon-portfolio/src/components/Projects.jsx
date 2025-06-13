@@ -39,7 +39,7 @@ const Projects = () => {
         Gestion du site (front/back), espace admin, livraisons dynamiques, campagnes SMS/Emails, IA chatbot, et création graphique (étiquettes, bannières, promos).
       </p>
       <p className="img-caption">
-        Contact : +33 6 44 75 80 27 – mekafrance@outlook.fr
+        Contact : mekafrance@outlook.fr
       </p>
     </div>
   </div>
