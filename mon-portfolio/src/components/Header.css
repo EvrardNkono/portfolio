@@ -121,7 +121,7 @@
     position: fixed;       /* Toujours fixé sur mobile */
     top: 15px;
     right: 20px;
-    z-index: 1100;         /* Au-dessus du menu */
+    z-index: 1120 !important;         /* Au-dessus du menu */
     margin-top: 0;
   }
 }
