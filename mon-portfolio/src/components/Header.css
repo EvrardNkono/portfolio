@@ -115,10 +115,13 @@
     transform: translateX(0);
   }
 
+  /* Supprime position relative et garde fixed + z-index élevé */
   .menu-toggle {
-    position: relative;
     display: flex;
-    margin-top: 0px;
-    z-index: 999;
+    position: fixed;   /* Important : toujours fixé */
+    top: 50px;
+    right: 20px;
+    z-index: 1200;     /* Plus grand que nav-links */
+    margin-top: 0;
   }
 }
