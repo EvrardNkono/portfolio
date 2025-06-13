@@ -13,6 +13,7 @@
   align-items: center;
   font-family: 'Arial', sans-serif;
   color: #0a2540; /* bleu marine */
+  position: relative;
 }
 
 .logo {
@@ -45,41 +46,41 @@
   border-bottom-color: #1e90ff;
 }
 
-/* Menu hamburger - caché desktop */
+/* Hamburger menu - caché sur desktop */
 .menu-toggle {
   display: none;
   flex-direction: column;
   gap: 6px;
-  width: 40px;      /* Plus large */
-  height: 36px;     /* Plus haut */
+  width: 40px;
+  height: 36px;
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
-  position: fixed;   /* Toujours visible */
+  position: fixed;  /* Toujours visible */
   top: 15px;
   right: 20px;
-  z-index: 1100;
-  filter: drop-shadow(0 0 4px #1e90ff); /* Légère lueur bleue */
+  z-index: 1100;    /* Au-dessus du menu */
+  filter: drop-shadow(0 0 4px #1e90ff);
   transition: filter 0.3s ease;
 }
 
 .menu-toggle:hover {
-  filter: drop-shadow(0 0 8px #1e90ff); /* Glow plus intense au hover */
+  filter: drop-shadow(0 0 8px #1e90ff);
 }
 
 .menu-toggle span {
   display: block;
-  height: 5px;             /* Barres plus épaisses */
+  height: 5px;
   background-color: #1e90ff;
   border-radius: 3px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Animation du hamburger quand menu ouvert */
+/* Animation quand menu ouvert */
 .menu-toggle.open span:nth-child(1) {
   transform: translateY(13px) rotate(45deg);
-  background-color: #ff4500; /* Rouge dynamique */
+  background-color: #ff4500;
   box-shadow: 0 0 8px #ff4500;
 }
 
@@ -115,13 +116,20 @@
     transform: translateX(0);
   }
 
-  /* Supprime position relative et garde fixed + z-index élevé */
   .menu-toggle {
-    display: flex;
-    position: fixed;   /* Important : toujours fixé */
-    top: 50px;
+    display: flex;         /* Affiche le hamburger */
+    position: fixed;       /* Toujours fixé sur mobile */
+    top: 15px;
     right: 20px;
-    z-index: 1200;     /* Plus grand que nav-links */
+    z-index: 1100;         /* Au-dessus du menu */
     margin-top: 0;
+  }
+}
+
+/* Cacher le menu desktop sur mobile */
+@media (max-width: 768px) {
+  .nav-links:not(.active) {
+    display: flex;
+    pointer-events: none;  /* Évite de cliquer quand caché */
   }
 }
