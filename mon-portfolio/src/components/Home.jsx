@@ -31,6 +31,11 @@ const Home = () => {
         <div className="hero-content">
           <h1>Evrard Nkono</h1>
           <p>Développeur web & stratège digital</p>
+
+          <p className="disclaimer" style={{ fontStyle: 'italic', fontSize: '0.9rem', color: '#555', marginTop: '0.5rem' }}>
+            Ce portfolio offre un léger aperçu de quelques uns mes projets et compétences.
+          </p>
+
           <div className="hero-links">
             {socialLinks.map((link) => (
               <a
