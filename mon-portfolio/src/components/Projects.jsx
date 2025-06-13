@@ -26,19 +26,25 @@ const Projects = () => {
         {openCategory === 'web' && (
           <div className="category-content">
             <div className="project">
-              <h3>Meka France</h3>
-              <div className="project-content">
-                <div className="project-images">
-                  <img src="/images/projects/meka-site.png" alt="Site Meka France" className="project-img" />
-                </div>
-                <div className="project-description">
-                  <p>
-                    Développement complet de <a href="https://mekafrance.fr" target="_blank" rel="noreferrer">mekafrance.fr</a> : front & back. Gestion des produits avec poids, prix, réductions, livraisons dynamiques. Espace admin complet, campagnes SMS/Emails, chatbot IA, et interface marketing visuelle (étiquettes, bannières).
-                  </p>
-                  <p className="img-caption">Site e-commerce responsive, catalogue interactif, promos en temps réel</p>
-                </div>
-              </div>
-            </div>
+  <h3>Meka France – Site e-commerce</h3>
+  <div className="project-content">
+    <div className="project-images">
+      <img src="/images/projects/meka-site.png" alt="Site Meka France" className="project-img" />
+    </div>
+    <div className="project-description">
+      <p>
+        Développement complet de <a href="https://mekafrance.fr" target="_blank" rel="noreferrer">mekafrance.fr</a>, une entreprise française spécialisée dans les produits exotiques, basée au 12 rue de Draveil, 91260 Juvisy-sur-Orge.
+      </p>
+      <p>
+        Gestion du site (front/back), espace admin, livraisons dynamiques, campagnes SMS/Emails, IA chatbot, et création graphique (étiquettes, bannières, promos).
+      </p>
+      <p className="img-caption">
+        Contact : +33 6 44 75 80 27 – mekafrance@outlook.fr
+      </p>
+    </div>
+  </div>
+</div>
+
 
             <div className="project">
               <h3>Afrilink</h3>
@@ -70,20 +76,7 @@ const Projects = () => {
               </div>
             </div>
 
-            <div className="project">
-              <h3>Switchn Camtel</h3>
-              <div className="project-content">
-                <div className="project-images">
-                  <img src="/images/projects/switchn.png" alt="Switchn Camtel" className="project-img" />
-                </div>
-                <div className="project-description">
-                  <p>
-                    Participation au développement frontend de <a href="https://www.switchn.cm" target="_blank" rel="noreferrer">switchn.cm</a> pour Camtel. Intégration des interfaces utilisateurs, animation des composants, gestion de l'inscription, authentification et navigation dynamique sur React.
-                  </p>
-                  <p className="img-caption">Plateforme moderne orientée services numériques pour abonnés</p>
-                </div>
-              </div>
-            </div>
+            
           </div>
         )}
       </div>
@@ -107,6 +100,20 @@ const Projects = () => {
                 </div>
               </div>
             </div>
+            <div className="project">
+              <h3>Switchn Camtel</h3>
+              <div className="project-content">
+                <div className="project-images">
+                  <img src="/images/projects/switchn.webp" alt="Switchn Camtel" className="project-img" />
+                </div>
+                <div className="project-description">
+                  <p>
+                    Participation au développement frontend de Switchn vendu a  Camtel (Opperateur telephonique Camerounais). Intégration des interfaces utilisateurs, animation des composants, gestion de l'inscription, authentification et navigation dynamique sur React.
+                  </p>
+                  <p className="img-caption">Plateforme moderne orientée services numériques pour abonnés</p>
+                </div>
+              </div>
+            </div>
           </div>
         )}
       </div>
@@ -119,18 +126,43 @@ const Projects = () => {
         {openCategory === 'pub' && (
           <div className="category-content">
             <div className="project">
-              <h3>Campagnes visuelles</h3>
-              <div className="project-content">
-                <div className="project-images">
-                  <img src="/images/projects/flyer1.png" alt="Affiche" className="project-img" />
-                  <img src="/images/projects/flyer2.png" alt="Flyer" className="project-img" />
-                </div>
-                <div className="project-description">
-                  <p>Création de supports visuels pour promotions, affiches, bannières, flyers print & digitaux.</p>
-                  <p className="img-caption">Flyers événementiels et publicités alimentaires impactantes</p>
-                </div>
-              </div>
-            </div>
+  <h3 style={{ fontSize: "1.6rem", marginBottom: "1rem" }}>Campagnes visuelles</h3>
+  <div className="project-content" style={{ display: "flex", flexWrap: "wrap", gap: "1rem", alignItems: "flex-start" }}>
+    
+    {/* Images compactes */}
+    <div className="project-images" style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
+      <img
+        src="/images/projects/flyer1.png"
+        alt="Affiche"
+        style={{
+          maxWidth: "140px",
+          borderRadius: "8px",
+          boxShadow: "0 2px 6px rgba(0, 0, 0, 0.1)",
+          objectFit: "cover"
+        }}
+      />
+      <img
+        src="/images/projects/flyer2.png"
+        alt="Flyer"
+        style={{
+          maxWidth: "140px",
+          borderRadius: "8px",
+          boxShadow: "0 2px 6px rgba(0, 0, 0, 0.1)",
+          objectFit: "cover"
+        }}
+      />
+    </div>
+
+    {/* Description alignée */}
+    <div className="project-description" style={{ flex: "1", minWidth: "200px" }}>
+      <p>Création de supports visuels pour promotions, affiches, bannières, flyers print & digitaux.</p>
+      <p className="img-caption" style={{ fontStyle: "italic", color: "#555" }}>
+        Flyers événementiels et publicités alimentaires impactantes
+      </p>
+    </div>
+  </div>
+</div>
+
           </div>
         )}
       </div>
@@ -171,6 +203,9 @@ const Projects = () => {
                 <div className="project-images">
                   <img src="/images/projects/lahotte-logo.png" alt="Logo LaHotte" className="project-img" />
                 </div>
+                <div className="project-images">
+                  <img src="/images/projects/meka-logo.jpg" alt="Logo LaHotte" className="project-img" />
+                </div>
                 <div className="project-description">
                   <p>Création de logos sur mesure via Figma & Photoshop, du croquis à la version finale.</p>
                   <p className="img-caption">Logo corporate simple & professionnel</p>
@@ -180,6 +215,37 @@ const Projects = () => {
           </div>
         )}
       </div>
+      {/* Gestion de projet */}
+<div className="project-category">
+  <button onClick={() => toggleCategory('aubistro')}>
+    6. Gestion de projet : Au Bistro {openCategory === 'aubistro' ? '▲' : '▼'}
+  </button>
+  {openCategory === 'aubistro' && (
+    <div className="category-content">
+      <div className="project">
+        <h3>Développement & Stratégie – Au Bistro</h3>
+        <div className="project-content">
+          <div className="project-description">
+            <p>
+              Je participe activement au développement de l’enseigne *Au Bistro*, un restaurant en pleine
+              expansion situé à Emana, Yaoundé. Mon rôle comprend :
+            </p>
+            <ul>
+              <li>La définition de l’identité visuelle et de la stratégie marketing globale</li>
+              <li>Le pilotage de campagnes publicitaires locales (flyers, affiches, bouche-à-oreille)</li>
+              <li>Le soutien au développement du chiffre d’affaires via des actions ciblées</li>
+              <li>La coordination entre les équipes de service et la direction pour la croissance continue</li>
+            </ul>
+            <p className="img-caption" style={{ fontStyle: "italic", color: "#555" }}>
+              Une aventure humaine et entrepreneuriale ancrée dans la réalité camerounaise.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+</div>
+
     </section>
     <ScrollHintPopup />
     </>

@@ -25,43 +25,40 @@ const About = () => {
       case 'presentation':
         return (
           <p>
-            Salut, moi c’est <strong>Evrard Nkono</strong>, développeur web full-stack freelance.
-            Je transforme des idées en expériences digitales modernes, performantes et belles.
-            Passionné par le code, la culture, et les projets à impact, je ne conçois pas mon travail sans <strong>valeur ajoutée</strong>.
-          <div className="social-float">
-          <a href="https://linkedin.com/in/tonprofil" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <img src="images/skills/linkedin.jpg" alt="LinkedIn" />
-          </a>
-          <a href="https://github.com/tonprofil" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <img src="images/skills/github.png" alt="GitHub" />
-          </a>
-          
-        </div>
+            Salut, moi c’est <strong>Evrard Nkono</strong>, développeur web full-stack freelance.  
+            Je transforme les idées en expériences digitales modernes, performantes et élégantes.  
+            Passionné par le code, la culture et l’innovation, je mets un point d’honneur à toujours apporter <strong>une vraie valeur ajoutée</strong> dans mes projets.
           </p>
-          
         );
-        
       case 'parcours':
-        return (
-          <p>
-            J’ai travaillé sur des <strong>plateformes e-commerce</strong>, des applications interactives, des chatbots intelligents,
-            et des outils marketing sur mesure. Mes expériences m'ont appris à mixer performance, design et stratégie.
-          </p>
-        );
+  return (
+    <p>
+      Hors de mes compétences en développement web et applications mobiles,  
+      mon travail m’a permis d’accroître de l’expérience en <strong>infographie</strong>, <strong>management</strong>, <strong>rédaction</strong>,  
+      <strong>gestion de projet</strong> et <strong>marketing digital</strong>.  
+      Cette polyvalence me donne une vraie force pour piloter des projets complets avec créativité et rigueur.
+    </p>
+  );
+
       case 'creativite':
-        return (
-          <p>
-            Grâce à mes compétences en <strong>infographie</strong>, je crée aussi des visuels puissants pour mes projets web :
-            bannières, étiquettes produits, contenus réseaux sociaux… tout ce qui fait vibrer un branding ✨
-          </p>
-        );
+  return (
+    <p>
+      La créativité est mon terrain de jeu préféré quand je quitte le clavier.  
+      En infographie, je conçois des visuels puissants, des bannières percutantes et des étiquettes produits qui captent l’attention au premier regard.  
+      J’aime aussi créer des contenus sur mesure pour les réseaux sociaux, où chaque image raconte une histoire et fait vibrer l’identité d’une marque.  
+      Pour moi, un bon design ne se contente pas d’être beau, il doit transmettre une émotion et créer un lien fort avec le public.
+    </p>
+  );
+
       case 'philosophie':
-        return (
-          <p>
-            Pour moi, le développement est plus qu’un job. C’est un art, un jeu et un acte de construction. <br />
-            J’avance avec curiosité, ambition et la volonté de toujours apprendre et transmettre.
-          </p>
-        );
+  return (
+    <p>
+      Pour moi, le développement est bien plus qu’un métier : c’est un art, un jeu, une aventure où chaque ligne de code construit l’avenir.  
+      L’intelligence artificielle, quant à elle, ouvre des portes fascinantes vers des solutions innovantes et intelligentes, un véritable terrain d’exploration sans fin.  
+      J’avance chaque jour avec curiosité, passion et humilité, convaincu que la transmission et le partage des savoirs sont les clés pour grandir ensemble et repousser les limites du possible.
+    </p>
+  );
+
       default:
         return null;
     }
@@ -111,45 +108,6 @@ const About = () => {
           <div className="profile-pic">
             <img src="/images/evrard.jpg" alt="Photo d'Evrard Nkono" />
           </div>
-          <div className="skills">
-            <img src="images/skills/html5.png" alt="Développement" />
-            <img src="images/skills/node.png" alt="Infographie" />
-            <img src="images/skills/react.png" alt="Projets" />
-          </div>
-        </div>
-      </div>
-
-      <div className="about-footer">
-        <div className="skills-floating">
-          <img src="images/skills/html5.png" alt="HTML5" />
-          <img src="images/skills/css3.png" alt="CSS3" />
-          <img src="images/skills/js.png" alt="JavaScript" />
-          <img src="images/skills/react.png" alt="React" />
-          <img src="images/skills/node.png" alt="Node.js" />
-          <img src="images/skills/js.png" alt="Express" />
-          <img src="images/skills/express.png" alt="PostgreSQL" />
-          <img src="images/skills/postgresql.png" alt="MongoDB" />
-          <img src="images/skills/figma.jpg" alt="Figma" />
-          <img src="images/skills/photoshop.png" alt="Photoshop" />
-          <img src="images/skills/illustrator.png" alt="Illustrator" />
-          <img src="images/skills/git.png" alt="Git" />
-          <img src="images/skills/github.png" alt="GitHub" />
-          <img src="images/skills/tailwind.png" alt="Tailwind CSS" />
-          <img src="images/skills/docker.png" alt="Docker" />
-        </div>
-
-        <div className="social-float">
-          <a href="https://linkedin.com/in/tonprofil" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <img src="images/skills/linkedin.jpg" alt="LinkedIn" />
-          </a>
-          <a href="https://github.com/tonprofil" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <img src="images/skills/github.png" alt="GitHub" />
-          </a>
-          
-        </div>
-
-        <div className="fun-illustration">
-          <img src="images/skills/gif.gif" alt="Chien qui code" />
         </div>
       </div>
     </section>

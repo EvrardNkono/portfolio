@@ -49,26 +49,38 @@
 .menu-toggle {
   display: none;
   flex-direction: column;
-  gap: 5px;
-  width: 25px;
-  height: 22px;
+  gap: 6px;
+  width: 40px;      /* Plus large */
+  height: 36px;     /* Plus haut */
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
+  position: fixed;   /* Toujours visible */
+  top: 15px;
+  right: 20px;
+  z-index: 1100;
+  filter: drop-shadow(0 0 4px #1e90ff); /* Légère lueur bleue */
+  transition: filter 0.3s ease;
+}
+
+.menu-toggle:hover {
+  filter: drop-shadow(0 0 8px #1e90ff); /* Glow plus intense au hover */
 }
 
 .menu-toggle span {
   display: block;
-  height: 3px;
+  height: 5px;             /* Barres plus épaisses */
   background-color: #1e90ff;
-  border-radius: 2px;
-  transition: all 0.3s ease;
+  border-radius: 3px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Animation du hamburger quand menu ouvert */
 .menu-toggle.open span:nth-child(1) {
-  transform: translateY(9px) rotate(45deg);
+  transform: translateY(13px) rotate(45deg);
+  background-color: #ff4500; /* Rouge dynamique */
+  box-shadow: 0 0 8px #ff4500;
 }
 
 .menu-toggle.open span:nth-child(2) {
@@ -76,7 +88,9 @@
 }
 
 .menu-toggle.open span:nth-child(3) {
-  transform: translateY(-9px) rotate(-45deg);
+  transform: translateY(-13px) rotate(-45deg);
+  background-color: #ff4500;
+  box-shadow: 0 0 8px #ff4500;
 }
 
 /* Responsive mobile */
@@ -102,6 +116,9 @@
   }
 
   .menu-toggle {
+    position: relative;
     display: flex;
+    margin-top: 0px;
+    z-index: 999;
   }
 }

@@ -11,15 +11,15 @@ const Contact = () => {
         <div className="contact-cards">
           <div className="contact-card">
             <h3>Email</h3>
-            <a href="mailto:evrardnkono870@gmail.com.com">evrard@example.com</a>
+            <a href="mailto:evrardnkono870@gmail.com">evrardnkono870@gmail.com</a>
           </div>
           <div className="contact-card">
             <h3>GitHub</h3>
-            <a href="https://github.com/EvrardNkono" target="_blank" rel="noreferrer">github.com/ton-github</a>
+            <a href="https://github.com/EvrardNkono" target="_blank" rel="noreferrer">https://github.com/EvrardNkono</a>
           </div>
           <div className="contact-card">
             <h3>LinkedIn</h3>
-            <a href="https://www.linkedin.com/in/evrard-nkono-2444b6359/" target="_blank" rel="noreferrer">linkedin.com/in/ton-profil</a>
+            <a href="https://www.linkedin.com/in/evrard-nkono-2444b6359/" target="_blank" rel="noreferrer">https://www.linkedin.com/in/evrard-nkono-2444b6359/</a>
           </div>
         </div>
       </div>

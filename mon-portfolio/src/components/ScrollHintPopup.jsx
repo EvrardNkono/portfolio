@@ -61,7 +61,7 @@ const ScrollHintPopup = () => {
           style={{
             position: 'fixed',
             inset: 0,
-            backgroundColor: 'rgba(0, 0, 0, 0.15)',
+            backgroundColor: 'rgba(255, 255, 255, 0.15)',
             zIndex: 9998,
             pointerEvents: 'none',
           }}
