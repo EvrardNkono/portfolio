@@ -1,84 +1,70 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './Home.css';
 
-const projectSlides = [
-  { id: 1, src: 'images/projects/meka-site.png', alt: 'Projet 1' },
-  { id: 2, src: 'images/projects/camer-site.png', alt: 'Projet 2' },
-  { id: 3, src: 'images/projects/afri-site.png', alt: 'Projet 3' },
-];
-
-const frameworks = [
-  { id: 'react', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg', alt: 'React' },
-  { id: 'node', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg', alt: 'Node.js' },
-  { id: 'js', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg', alt: 'JavaScript' },
-  { id: 'css', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg', alt: 'CSS3' },
-  { id: 'html', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg', alt: 'HTML5' },
-  { id: 'express', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg', alt: 'Express' },
+const socialLinks = [
+  { name: 'LinkedIn', url: 'https://linkedin.com/in/tonprofil', icon: 'fab fa-linkedin' },
+  { name: 'GitHub', url: 'https://github.com/tonprofil', icon: 'fab fa-github' },
+  { name: 'Twitter', url: 'https://twitter.com/tonprofil', icon: 'fab fa-twitter' },
 ];
 
 const Home = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev === 0 ? projectSlides.length - 1 : prev - 1));
-  };
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev === projectSlides.length - 1 ? 0 : prev + 1));
-  };
-
-  // Slide auto toutes les 3 secondes
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev === projectSlides.length - 1 ? 0 : prev + 1));
-    }, 3000);
-
-    return () => clearInterval(interval); // Nettoyage
-  }, []);
-
   return (
-    <section className="home">
-      <header className="banner">
-        <div className="banner-left">
+    <section className="hero-banner">
+      {/* 🌊 Vague harmonieuse en haut */}
+      <div className="wave-top">
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path
+            fill="#b3e5fc"
+            d="M0,160 C360,240 1080,80 1440,160 L1440,0 L0,0 Z"
+          />
+        </svg>
+      </div>
+
+      <div className="hero-container">
+        <div className="hero-photo-wrapper">
           <img
             src="images/home/EvrardProfil.jpg"
             alt="Photo d'Evrard"
-            className="profile-photo"
+            className="hero-photo"
           />
         </div>
-        <div className="banner-right">
-          <h2>Salut, moi c’est Evrard 👋</h2>
-          <p>Développeur web passionné & entrepreneur digital</p>
+        <div className="hero-content">
+          <h1>Evrard Nkono</h1>
+          <p>Développeur web & stratège digital</p>
+          <div className="hero-links">
+            {socialLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={link.name}
+              >
+                <i className={link.icon}></i>
+              </a>
+            ))}
+          </div>
         </div>
-      </header>
+      </div>
 
-      <div className="content-after-banner">
-        <div className="slider">
-          <button className="nav-btn prev" onClick={prevSlide} aria-label="Slide précédent">&#10094;</button>
-
-          <img
-            src={projectSlides[currentIndex].src}
-            alt={projectSlides[currentIndex].alt}
-            className="slide-image"
+      {/* 🌊 Vagues douces et artistiques en bas */}
+      <div className="wave-bottom">
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path
+            fill="#e0f7fa"
+            d="M0,224 C360,320 1080,160 1440,224 L1440,320 L0,320 Z"
           />
-
-          <button className="nav-btn next" onClick={nextSlide} aria-label="Slide suivant">&#10095;</button>
-        </div>
-
-        <div className="circle-icons">
-          {frameworks.map((fw, i) => (
-            <img
-              key={fw.id}
-              src={fw.src}
-              alt={fw.alt}
-              className="icon"
-              style={{
-                transform: `rotate(${(360 / frameworks.length) * i}deg) translate(120px) rotate(-${(360 / frameworks.length) * i}deg)`
-              }}
-              title={fw.alt}
-            />
-          ))}
-        </div>
+          <path
+            fill="#b2ebf2"
+            fillOpacity="0.6"
+            d="M0,288 C480,160 960,320 1440,192 L1440,320 L0,320 Z"
+          />
+          <path
+            fill="#81d4fa"
+            fillOpacity="0.4"
+            d="M0,256 C320,192 1120,288 1440,160 L1440,320 L0,320 Z"
+          />
+        </svg>
       </div>
     </section>
   );
